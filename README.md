@@ -89,19 +89,30 @@ Anaconda의 Jupyter Notebook환경에서 Python 언어로 진행하였다. 분�
 
 ## 2. 3. Learning Curve
 ### ①	Linear Regression
+![Linear Regression Learning Curve](/img/linear_lc.png)
+
+
 Training set size가 커질 수록 오차율이 점점 줄어드는 것을 확인할 수 있다. 따라서 Linear Regression에 2400개의 데이터를 사용한다.
 ### ②	XGBoost Regression
+ ![XGBoost Regression Learning Curve](/img/xgb.png)
+ 
  
 Training set size가 커질 수록 오차율이 점점 줄어드는 것을 확인할 수 있다. 따라서 XGBoost Regression에 2400개의 데이터를 사용한다. 또한 XGBoost Regression의 오차율은 이전의 Linear Regression의 오차율보다 낮은 수치를 보인다.
 ### ③	LightGBM Regression
+ ![LightGBM Regression Learning Curve](/img/lgbm.png)
+ 
  
 Training set size가 커질 수록 오차율이 점점 줄어드는 것을 확인할 수 있다. 따라서 LightGBM Regression에 2400개의 데이터를 사용한다. LightGBM의 알고리즘은 이전의 Linear Regression, XGBoost Regression과 비교했을 때 가장 낮은 오차율을 보인다.
 
 ## 2. 4. ANOVA Test
+ ![AnovaTest](/img/anova.JPG)
+ 
  
 Column 1은 Linear Regression의 RMSE이다. Column 2는 XGBoost Regression의 RMSE이며 Column3은 LightGBM의 RMSE이다. 세 알고리즘의 RMSE를 비교하였을 때 LightGBM의 RMSE가 가장 낮고, Linear Regression의 RMSE가 가장 높다. 이 때 F 비는 F 기각치보다 매우 높은 수치를 보인다. 따라서 세 알고리즘은 유의미하다.
 
 ## 2. 5. Demo Program 
+ ![Demo Program](/img/demo.JPG)
+ 
  
 위의 분석에 따라 간단한 Demo Program을 제작하였다. 상점의 고유번호와 상품 유형의 고유번호를 입력했을 때 세 알고리즘의 예측 결과와 원본 데이터를 비교했다. 위의 그림은 6번 상점의 2번 상품 유형을 입력하였을 때 세 알고리즘 중 LightGBM Regression의 예측 결과가 원본 데이터 값과 가장 유사했다.
 
